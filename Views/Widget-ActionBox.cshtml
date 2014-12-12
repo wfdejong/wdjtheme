@@ -1,0 +1,15 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Widgets.Models
+@{
+  Model.Metadata.Wrappers.Clear();
+  var title = ((IContent)Model.ContentItem).As<WidgetPart>().Title;
+}
+
+<div class="actionbox">
+	<div class="item">
+		<h4>
+			@title
+		</h4>
+		@Display(Model.Content)
+	</div>
+</div>

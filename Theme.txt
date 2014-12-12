@@ -1,0 +1,7 @@
+﻿Name: Willem de Jong
+Author: Willem de Jong
+Description: Theme with big bar for showing random background pictures.
+Version: 0.9.0
+Tags: Orange, Blue, Background pictures
+Website: http://willemdejong.net
+Zones: Header, SubHeader, Navigation, ActionBox, RightPane, Content, Footer

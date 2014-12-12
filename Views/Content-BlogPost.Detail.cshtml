@@ -1,0 +1,42 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item");
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+    
+    var tag = Tag(Model, "article");
+}
+
+@*    <header>
+        
+        @if (Model.Meta != null) {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
+        }
+    </header>
+    
+    @if(Model.Footer != null) {
+        <footer>
+            @Display(Model.Footer)
+        </footer>
+    }*@
+
+
+<div class="content blogdetails"> 
+				
+	@Display(Model.Header)
+	
+	@if(Model.Meta != null) {
+		<span class="blogmeta">
+			Written by: @Display(Model.Meta)
+		</span>
+	}
+	@Display(Model.Content)
+    	
+</div>
