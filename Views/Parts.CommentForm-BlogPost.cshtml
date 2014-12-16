@@ -8,6 +8,7 @@
     var settings = commentsPart.TypePartDefinition.Settings.GetModel<CommentsPartSettings>();
 }
 
+<div class="actionbox">
 @if (!Model.ContentPart.CommentsActive) {
     if (Model.ContentPart.Comments.Count > 0) {
     <div id="comments">
@@ -39,3 +40,4 @@ else {
     }
 
 }
+</div>

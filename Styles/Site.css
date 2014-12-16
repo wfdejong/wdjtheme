@@ -4,33 +4,37 @@
 
 .syntaxhighlighter table td
 {
-    font-size:13px !important;
-}
-
-.syntaxhighlighter {
-    width: 560px !important;
+    font-size:10px !important;
 }
 
 .edit-item-content fieldset {
 	border: 0;
-	color: #FFFFFF;
+	color: #FFFFFF;	
+	padding:0;
+	margin:0;
 }
 
 .edit-item-content legend {
 	color: #FFFFFF;
 }
 
+.who legend {
+	margin-bottom:10px;
+}
+
 .who ol,
 .what ol,
 ol.logon {
 	padding: 0;
+	margin: 0;
 }
 .who li,
 .what li,
 ol.logon li {
 	list-style-type: none;
 	list-style:none;	
-	padding: 5px;
+	padding: 0;
+	margin-bottom:10px;
 }
 
 .who li label,
@@ -44,16 +48,13 @@ html, body, div, ul, li, a, h1, h2, h3, h4, h5 {
 }
 
 html {
-  background-size: 100%;
-  background-attachment:fixed;   
+  background-size:cover;
+  background-attachment:fixed;
   font-family:"Noticia Text";
 }
 
 .base {
   margin: 0 auto;
-  width: 87%;
-  max-width: 1035px;
-  min-width: 400px;  
 }
 
 h1, h2, h3, h4, span.h4
@@ -64,18 +65,17 @@ h1 a, h1 a:hover, h1 a:visited, h1 a:active {
 }
 
 h1 {
-  font-size:70px;
-  padding-right: 210px;
-  padding-top: 20px;
+  font-size:40px;
+  padding-top: 5px;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 18px;
   color: #116A88;
 }
 
 h3 {
-  font-size:28px;
+  font-size:20px;
   color: #DA7914;
 }
 
@@ -105,9 +105,11 @@ h4 a {
 }
 
 div.header {
-  min-height: 120px;
   background-color: #FFFFFF;
   opacity:0.93;
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
 }
 
 div.header div.base {
@@ -116,13 +118,15 @@ div.header div.base {
 
 div.middle {
   background-color: #FFFFFF;
-  padding-bottom:30px;
-  padding-top:30px;
+  padding-bottom:10px;
+  padding-top:1px;
+  padding-left:10px;
+  padding-right:10px;
   opacity:0.93;
 }
 
 div.menubar {
-  height: 350px;
+  padding-bottom:100px;  
 }
 
 div.footer, 
@@ -131,7 +135,7 @@ div.footer a:hover,
 div.footer a:visited,
 div.footer a:active {
 	color: #808080;
-	font-size: 12px;
+	font-size: 8px;
 	text-align: center;
 }
 /*
@@ -145,9 +149,14 @@ div.menubar ul {
 div.menubar ul li {
   height: 60px;
   text-align:  center;
-  display: inline-block;
+  display: block;
   line-height: 60px;
-  padding-right: 5px;
+  width: 100%;
+  margin-bottom:3px;
+}
+
+div.menubar ul li.last {
+	margin-bottom:0px;
 }
 
 div.menubar ul li a,
@@ -156,11 +165,12 @@ div.menubar ul li a:visited {
   color: white;
   display: block;
   height: 60px;
-  padding: 0 30px;
+  padding: 0;
   text-decoration: none;
   background-color: #116A88;
   background: rgba(17, 106, 136, 0.6);
   font-weight:bold;
+  width: 100%;
 }
 
 div.menubar ul li a:hover {
@@ -187,23 +197,23 @@ div.menubar ul li.current a:hover {
 
 div.content {
   color: #333333;  
-  font-size:16px;
+  font-size:11px;
 }
 
-.comment-form {
-	width:100%;
-}
 
-div.actionbox,
-.comment-form {
+div.actionbox {
   background-color:#DA7914;
   border-radius:10px;
   padding: 10px;
-  margin-bottom:30px;
-  color:#FFFFFF;  
-  display:inline-block;
-  margin-bottom:60px;
+  margin-bottom:10px;
+  color:#FFFFFF;
+  display:block;	
  }
+
+form.comment-form {
+	display:block;
+		
+}
 
 div.actionbox h4,
 div.actionbox span.h4 {
@@ -246,11 +256,16 @@ div.actionbox input,
 div.actionbox textarea,
 .edit-item-content textarea,
 .comment-form button {
-  width: 320px;
+  width: 100%;
   border:none;
-  padding:4px;
   border-radius: 5px;
-  font-family:"Noticia Text";
+  font-family:"Noticia Text"; 
+  height:30px; 
+}
+
+div.actionbox textarea,
+.edit-item-content textarea {
+	height:120px;
 }
 
 div.actionbox ::-webkit-input-placeholder  {
@@ -264,11 +279,11 @@ div.actionbox input:-moz-placeholder {
 div.actionbox button[type=submit],
 .comment-form button[type=submit] {
   display: block;
-  width:auto;
-  float:right;
+  width:auto;  
   background-color: #333333;
   color: #FFFFFF;
-  font-weight:bold;
+  font-weight:bold;  
+  margin-top:10px;  
 }
 
 div.actionbox button[type=submit]:hover {
@@ -279,9 +294,8 @@ div.actionbox button[type=submit]:hover {
 div.actionlinebox {
   border: solid #DA7914 1px;
   border-radius: 10px;
-  padding:10px;  
-  margin-bottom:30px;
-  display:inline-block;
+  padding:10px;
+  margin-bottom:10px;
 }
 
 div.actionlinebox div.item {
@@ -348,39 +362,15 @@ div.actionlinebox button[type=submit]:hover {
   color: #333333;
 }
 
-div.rightpane div.content {
-  padding-left: 50px;
-}
-
-div.leftpane div.content {
-  padding-right: 50px;
-}
-
-
 div.leftpane, div.rightpane {
   display:inline-block;
+  width:100%;
 }
-
-div.leftpane {
-  max-width: 600px;
-  min-width: 400px;
-}
-
-div.middle div.leftpane {
-  border-right: 1px #cecece dotted;
-}
-
-div.rightpane {
-  width:400px;
-}
-
 
 div.middle div.leftpane,
 div.middle div.rightpane {
-  margin-top:20px;
-  margin-bottom: 20px;  
+  margin-top:10px;
   vertical-align:top;
-
 }
 
 div.down {
@@ -394,13 +384,8 @@ div.down {
  */
 div.blogsummary,
 div.blogdetails {
-  display: inline-block;
-  padding-bottom:30px;
-}
-
-div.blogsummary p,
-div.blogdetails p {
-	padding-bottom: 10px;
+  display: block;
+  padding-bottom:20px;
 }
 
 div.blogdetails ul {
@@ -408,13 +393,12 @@ div.blogdetails ul {
     padding-left:20px;
 }
 
-span.blogfooter,
 div.bloglistfooter {
   padding-right: 20px;
 }
 
 div.blogsummary span.blogfooter {
-  font-size:12px;
+  font-size:9px;
   float:right;
   color: #808080;
 }
@@ -439,8 +423,7 @@ div.blogsummary span.blogfooter span.more a,
 div.blogsummary span.blogfooter span.more a.link,
 div.blogsummary span.blogfooter span.more a.active,
 div.blogsummary span.blogfooter span.more a.visited {
-  color: #DA7914;  
-  font-size:16px;
+  color: #DA7914;    
   font-weight:bold;
 }
 
@@ -448,8 +431,14 @@ div.blogsummary span.blogfooter a.more:hover {
   color: #555555;
 }
 
+div.blogdetails img {
+	max-width:100%;
+	height:auto;
+	width:auto;
+}
+
 div.blogdetails span.blogmeta {
-  padding-top:10px;
+  padding-top:5px;
   display:block;
   color:#808080;
 }
@@ -477,17 +466,12 @@ div.bloglistfooter span.newerposts {
   float:right;
 }
 
-div.blogcomments {
-  font-size:12px;
-  color: #808080;
-  width:100%;
-}
 
 div.blogcomments li {
   border-bottom: 1px #808080 ridge;
   display:inline-block;
   padding-bottom: 15px;
- margin-right: 10px;
+  margin-right: 10px;
   width:100%;
 }
 
@@ -514,6 +498,26 @@ div.actionlinebox div.item {
   padding-bottom: 10px;
   display:inline-block;
   width:100%;
+}
+
+ul.blog-posts li.last div.blogsummary {
+	padding-bottom:10px;
+}
+ul.pager li {
+	display:block;	
+	margin:0;
+}
+
+
+ul.pager li {
+	padding-top:10px;
+}
+
+ul.pager li a {
+	display:block;
+	width:100%;
+	text-align:center;
+	font-size:10px;
 }
 
 /*
@@ -595,6 +599,11 @@ div.resume p {
   margin-top: 5px;
 }
 
+p.tags {
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
 p.tag,
 p.tags a,
 p.tags a:visited,
@@ -602,13 +611,153 @@ p.tags a:active,
 p.tags a:hover {
   display: inline-block;
   border: 1px solid #116A88;
-  border-radius:5px;
-  padding:3px;
+  border-radius:3px;
+  padding:2px;
   background-color: #CECECE;
   color: #116A88;
-  font-size: 13px;
+  font-size: 9px;
   margin-right: 3px;
   margin-top: 3px;
   margin-bottom: 3px; 
   text-decoration:none;
+}
+
+
+/* portrait */
+@media only screen and (min-width: 600px) {
+
+	.base {
+	  width: 100%;
+	}
+	
+	div.menubar ul li {		
+		display: inline-block;	
+		width:10em;
+	}
+
+	div.menubar {
+		padding-left:10px;
+	}
+
+	div.menubar ul li a {
+		padding: 0;
+	}
+
+	div.header div.leftpane, 
+	div.header div.rightpane {
+		width:49%;
+		display:inline-block;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+
+	div.content {
+		font-size: 15px;
+	}
+
+	div.blogsummary span.blogfooter {
+	  font-size:11px;  
+	}
+		
+	ul.pager li {
+		padding-top:10px;
+	}
+
+	ul.pager li a {
+		font-size:14px;
+	}
+
+	div.footer, 
+	div.footer a,
+	div.footer a:hover,
+	div.footer a:visited,
+	div.footer a:active {
+		font-size: 12px;		
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	
+	.base {
+	  width: 90%;
+	  min-width:900px;
+	  max-width:1500px;
+	}
+
+	div.menubar {
+		padding-bottom:initial;
+		height: 350px;
+	}
+
+	div.middle {
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+
+	div.header div.leftpane,
+	div.leftpane  {
+		min-width:510px;
+		width:50%;
+		display:inline-block;	
+		padding-right:30px;		
+		margin-right:30px;	
+	}
+
+	div.rightpane,
+	div.header div.rightpane {
+		width: 320px;
+		display:inline-block;
+	}
+
+	div.middle div.leftpane {		
+		border-right: 1px #cecece dotted;
+	}
+
+	div.middle div.leftpane,
+	div.middle div.rightpane {
+		margin-bottom: 50px;
+	}
+
+	h1 {
+	  font-size:70px;
+	  padding-top: 20px;
+	}
+
+	h2 {
+	  font-size: 45px;
+	}
+
+	h3 {
+	  font-size:28px;
+	}
+
+	h4, span.h4 {
+	  font-size:20px;
+	}
+
+	div.blogsummary {
+		padding-bottom: 60px;
+	}
+
+	div.blogsummary span.blogfooter {
+	  font-size:13px;	  
+	}
+
+	ul.pager li {
+		padding-top:10px;
+	}
+		
+	ul.pager li a {
+		font-size:16px;
+	}
+
+	div.footer, 
+	div.footer a,
+	div.footer a:hover,
+	div.footer a:visited,
+	div.footer a:active {
+		font-size: 12px;		
+	}
 }
