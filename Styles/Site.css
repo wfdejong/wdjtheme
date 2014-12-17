@@ -40,6 +40,7 @@ ol.logon li {
 .who li label,
 .what li label {
 	display: block;
+	margin-bottom:5px;
 }
 
 html, body, div, ul, li, a, h1, h2, h3, h4, h5 {
@@ -80,7 +81,7 @@ h3 {
 }
 
 h4, span.h4 {
-  font-size:20px;
+  font-size:14px;
   font-family: "Noticia Text";    
   font-weight:bold;
   color: #DA7914;
@@ -195,8 +196,14 @@ div.menubar ul li.current a:hover {
  */
 
 
-div.content {
-  color: #333333;  
+div.content,
+div.resume {
+  color: #333333;
+}
+
+div.content,
+div.resume,
+p {
   font-size:11px;
 }
 
@@ -296,6 +303,7 @@ div.actionlinebox {
   border-radius: 10px;
   padding:10px;
   margin-bottom:10px;
+  display:block;
 }
 
 div.actionlinebox div.item {
@@ -320,24 +328,45 @@ div.actionlinebox a.actionlink:hover {
   color: #555555;
 }
 
+div.actionlinebox form {
+	padding-top:10px;
+}
+
 div.actionlinebox fieldset {
 	border: 0;
+	max-width: 465px;
+	margin:0;
+	padding:0;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-right:10px;
+	display:block;
+}
+
+div.actionlinebox fieldset.submit-button {
+	margin-right:0px;
 }
 
 div.actionlinebox input,
 div.actionlinebox textarea,
 div.actionlinebox button[type=submit] {
-  width: 290px;
+  width: 100%;
+  max-width:300px;
   padding:4px;
   border-radius: 5px;
   border: 1px #333333 solid;
   background-color:rgba(33, 33, 33, 0.2);
   font-family:"Noticia Text";
   color: #333333;
+  display:inline-block;
 }
 
 div.actionlinebox label {
 	color: #333333;
+	display:inline-block;
+	width:100%;
+	max-width:150px;
+	vertical-align:top;
 }
 
 div.actionlinebox ::-webkit-input-placeholder  {
@@ -351,10 +380,11 @@ div.actionlinebox input:-moz-placeholder {
 div.actionlinebox button[type=submit] {
   display: block;
   width:auto;
-  float:right;
   background-color: #333333;
   color: #FFFFFF;
-  font-weight:bold;
+  font-weight:bold;  
+  margin-left: auto;
+  margin-right: 0;
 }
 
 div.actionlinebox button[type=submit]:hover {
@@ -389,8 +419,6 @@ div.blogdetails {
 }
 
 div.blogdetails ul {
-    padding-bottom:20px;
-    padding-left:20px;
 }
 
 div.bloglistfooter {
@@ -442,30 +470,6 @@ div.blogdetails span.blogmeta {
   display:block;
   color:#808080;
 }
-
-div.bloglistfooter {
-  font-size: 16px;
-}
-
-div.bloglistfooter a,
-div.bloglistfooter a:link,
-div.bloglistfooter a:visited {
-  font-weight: bold;
-}
-
-div.bloglistfooter span.sign {
-  font-size:18px;
-  font-weight:normal;
-}
-
-div.bloglistfooter span.olderposts {
-  float:left;
-}
-
-div.bloglistfooter span.newerposts {
-  float:right;
-}
-
 
 div.blogcomments li {
   border-bottom: 1px #808080 ridge;
@@ -520,29 +524,58 @@ ul.pager li a {
 	font-size:10px;
 }
 
+p.tags {
+	margin-top:6px;
+	margin-bottom:6px;
+}
+
+p.tag,
+p.tags a,
+p.tags a:visited,
+p.tags a:active,
+p.tags a:hover {
+  display: inline-block;
+  border: 1px solid #116A88;
+  border-radius:3px;
+  padding:2px;
+  background-color: #CECECE;
+  color: #116A88;
+  font-size: 9px;
+  margin-right: 3px;
+  text-decoration:none;
+}
 /*
  * End blog
  */
  
- /*
-  * Resume
-  */
-div.resume img {
-  float: right;
-  padding-right: 0px;
-  padding-left: 15px;
-  padding-bottom: 15px;
+/*
+ * Resume
+ */
+
+
+div.resume h2 {
+	display:block;
+	vertical-align:top;
 }
 
 div.resume h3 {
-  color: #116A88;
   font-family: "Noticia Text";
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  color: #116A88;
+  display:block;
 }
 
 div.resume h4 {
-  font-size: 14px;
+  display:inline;
+  font-size: 11px;
+  font-family: "Noticia Text";
+  color: #da7914;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display:block;
 }
 
 div.actionbox a.linkedin {
@@ -562,64 +595,21 @@ div.actionbox a.linkedin {
   display:block;
 }
 
-/*
-  * Resume
-  */
 div.resume img {
-  float: right;
-  padding-right: 0px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-
-div.resume h3 {
-  font-family: "Noticia Text";
-  font-size: 21px;
-  font-weight: bold;
-  padding-top: 30px;
-  padding-bottom: 0px;
-  color: #116A88;
-}
-
-div.resume h4 {
-  font-size: 18px;
-  font-family: "Noticia Text";
-  color: #da7914;
-  padding-top: 15px;
-  padding-bottom: 10px;
+	display:inline-block;
+	max-width:80px;
+	max-height:80px;
+	padding-top:10px;
 }
 
 div.resume ul {
-  padding-left: 15px;
-  padding-top: 15px;
+  margin-left: 20px;
+  padding-top: 5px;
 }
 
 div.resume p {
   margin-bottom:5px;
   margin-top: 5px;
-}
-
-p.tags {
-	margin-top:3px;
-	margin-bottom:3px;
-}
-
-p.tag,
-p.tags a,
-p.tags a:visited,
-p.tags a:active,
-p.tags a:hover {
-  display: inline-block;
-  border: 1px solid #116A88;
-  border-radius:3px;
-  padding:2px;
-  background-color: #CECECE;
-  color: #116A88;
-  font-size: 9px;
-  margin-right: 3px;
-  margin-top: 3px;
-  margin-bottom: 3px; 
-  text-decoration:none;
 }
 
 
@@ -653,8 +643,19 @@ p.tags a:hover {
 		font-size: 25px;
 	}
 
-	div.content {
-		font-size: 15px;
+	h4, span.h4 {
+		font-size:16px;
+	}
+
+	div.content,
+	div.resume {
+	  color: #333333;
+	}
+
+	div.content,
+	div.resume,
+	p {
+	  font-size:13px;
 	}
 
 	div.blogsummary span.blogfooter {
@@ -675,6 +676,41 @@ p.tags a:hover {
 	div.footer a:visited,
 	div.footer a:active {
 		font-size: 12px;		
+	}
+
+	
+	p.tags {
+		margin-top:6px;
+		margin-bottom:6px;
+	}
+
+	p.tag,
+	p.tags a,
+	p.tags a:visited,
+	p.tags a:active,
+	p.tags a:hover {
+	  
+	  border-radius:5px;
+	  padding:4px;
+	  background-color: #CECECE;
+	  color: #116A88;
+	  font-size: 11px;
+	  margin-right: 3px;
+	  margin-top: 3px;
+	  margin-bottom: 3px; 
+	}
+
+	div.resume h3 {
+	  font-size: 14px;	  
+	}
+
+	div.resume h4 {
+	  font-size: 12px;	  
+	}
+
+	div.resume img {
+		max-width:110px;
+		max-height:110px;		
 	}
 }
 
@@ -720,6 +756,18 @@ p.tags a:hover {
 		margin-bottom: 50px;
 	}
 
+	div.content,
+	div.resume {
+	  color: #333333;
+	}
+
+	div.content,
+	div.resume,
+	p {
+	  font-size:15px;
+	}
+
+
 	h1 {
 	  font-size:70px;
 	  padding-top: 20px;
@@ -732,7 +780,7 @@ p.tags a:hover {
 	h3 {
 	  font-size:28px;
 	}
-
+	
 	h4, span.h4 {
 	  font-size:20px;
 	}
@@ -746,7 +794,7 @@ p.tags a:hover {
 	}
 
 	ul.pager li {
-		padding-top:10px;
+		padding-top:30px;
 	}
 		
 	ul.pager li a {
@@ -759,5 +807,22 @@ p.tags a:hover {
 	div.footer a:visited,
 	div.footer a:active {
 		font-size: 12px;		
+	}
+
+	div.resume h3 {
+	  font-size: 18px;	  
+	}
+
+	div.resume h4 {
+	  font-size: 14px;	  
+	}
+		
+	div.resume img {
+		max-width:100%;
+		max-height:100%;		
+	}
+
+	div.actionlinebox {
+	  margin-top:30px;
 	}
 }
