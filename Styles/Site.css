@@ -415,7 +415,7 @@ div.down {
 div.blogsummary,
 div.blogdetails {
   display: block;
-  padding-bottom:20px;
+  padding-bottom:40px;
 }
 
 div.blogdetails ul {
@@ -596,7 +596,7 @@ div.actionbox a.linkedin {
 }
 
 div.resume img {
-	display:inline-block;
+	display:block;
 	max-width:80px;
 	max-height:80px;
 	padding-top:10px;
