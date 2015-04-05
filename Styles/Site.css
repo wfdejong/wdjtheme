@@ -484,8 +484,9 @@ div.blogcomments li.last {
 }
 
 div.blogcomments span.blogcommentitemfooter {
-  float:right;
-  padding-right:15px;
+	display:inline-block;
+	float:right;
+	font-style:italic;
 }
 
 div.blogcomments li {
